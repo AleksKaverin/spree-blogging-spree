@@ -1,10 +1,8 @@
-<div id="blog_entry_container" class="columns twelve omega">
+<div id="blog_entry_container">
   <% if !@blog_entries.empty? %>
     <ul id="blog_entry_entries">
       <% @blog_entries.each do |blog_entry| %>
-        <li>
-          <%= render :partial => 'spree/blog_entries/blog_entry', :locals => {:blog_entry => blog_entry} %>
-        </li>
+        <%= render :partial => 'spree/blog_entries/blog_entry', :locals => {:blog_entry => blog_entry} %>
       <% end %>
     </ul>
     <%= paginate @blog_entries %>
